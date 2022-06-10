@@ -23,7 +23,7 @@ def plot_cost(df, cost_column, eps_column, gender_column, diganostic_column, eps
         del temp, total_days
         to_plot = pd.DataFrame(x, y)
         fig = px.line(to_plot, x, y, labels=dict(x = "Día", y = "Costo acumulado"),
-            title = f"{title}-Costo por diario promedio por paciente {cost_per_day}")
+            title = f"{title}-Costo por diario promedio por paciente {np.ceil(cost_per_day)}")
         fig.add_bar(x = x, y = y, name = "Costo acumulado")
         return fig
     except Exception:
