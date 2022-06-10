@@ -6,4 +6,4 @@ def intro_view():
         la clase de trauma que este presente.")
     st.markdown("Para interactuar con la aplicación despliegue el menú de la flecha que se encuentra en \
         la parte superior izquierda.")
-    st.image("imgs/hospital_logo.jpg")
+    st.image("Dashboard/imgs/hospital_logo.jpg")

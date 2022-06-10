@@ -5,18 +5,18 @@ import introvis
 import generalstatsvis
 import costsvis
 
-data_costos_medicamentos = pd.read_csv("ComparativaPrecios.csv")
-data_costos_diagnosticos = pd.read_csv("TiempoPromedioDiagnosticos.csv")
-data_conteos = pd.read_excel("Libro1.xlsx", sheet_name="Valores unicos")
+data_costos_medicamentos = pd.read_csv("Dashboard/ComparativaPrecios.csv")
+data_costos_diagnosticos = pd.read_csv("Dashboard/TiempoPromedioDiagnosticos.csv")
+data_conteos = pd.read_excel("Dashboard/Libro1.xlsx", sheet_name="Valores unicos")
 
 unico_diagnosticos = gettinguniques.unique_values(data_costos_diagnosticos, "Diagnostico de Ingreso")
 genero = gettinguniques.unique_values(data_costos_diagnosticos, "sexo")
 eps = gettinguniques.unique_values(data_costos_diagnosticos, "EPS")
 
-st.image("imgs/logo-HU_Horizontal_Azul.png")
+st.image("Dashboard/imgs/logo-HU_Horizontal_Azul.png")
 
 
-st.sidebar.image("imgs/logo-HU_Horizontal_Azul.png")
+st.sidebar.image("Dashboard/imgs/logo-HU_Horizontal_Azul.png")
 st.sidebar.markdown("## Acá podrá encontrar las opciones adicionales que le permitirán interactuar con la applicación")
 visualization_mode = st.sidebar.selectbox("Seleccione lo que desea ver",
     "-,Estadísticas Generales,Costos por trauma para las EPS".split(","))
